@@ -53,6 +53,9 @@ jar {
 
 test {
     ignoreFailures = true
+    testLogging {
+        showStandardStreams = true
+    }
     jacoco {
         append = false
         destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
