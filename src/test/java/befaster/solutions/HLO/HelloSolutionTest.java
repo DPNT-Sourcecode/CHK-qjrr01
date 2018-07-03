@@ -31,4 +31,10 @@ public class HelloSolutionTest {
         assertThat(hello.hello("John"), equalTo("Hello, John!"));
     }
 
+    @Test
+    public void testCraftsman() throws Exception {
+        assertThat(hello.hello("Craftsman"), equalTo("Hello, Craftsman!"));
+    }
+
+
 }
