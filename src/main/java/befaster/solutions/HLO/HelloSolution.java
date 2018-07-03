@@ -7,6 +7,6 @@ public class HelloSolution {
         if (friendName == null || friendName.isEmpty()) {
             return "Hello, World!";
         }
-        return "Hello, {0}!".format(friendName);
+        return "Hello, " + friendName + "!";
     }
 }
