@@ -4,23 +4,15 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 
 public class CheckoutSolutionTest {
   private CheckoutSolution checkout;
 
-  private Map<String, Integer> priceMap = new HashMap<>();
-
   @Before
   public void setUp() {
-    priceMap.put("A", 50);
-    priceMap.put("B", 30);
-    priceMap.put("C", 20);
-    priceMap.put("D", 15);
-    checkout = new CheckoutSolution(priceMap);
+    checkout = new CheckoutSolution();
   }
 
   @Test
