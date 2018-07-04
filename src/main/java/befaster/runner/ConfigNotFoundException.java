@@ -1,8 +1,9 @@
 package befaster.runner;
 
 public class ConfigNotFoundException extends Exception {
-    ConfigNotFoundException(String message) {
-        super(message);
-    }
+  static final long serialVersionUID = -1547800106193663275L;
 
+  ConfigNotFoundException(String message) {
+    super(message);
+  }
 }

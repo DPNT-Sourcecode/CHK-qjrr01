@@ -1,8 +1,9 @@
 package befaster.runner;
 
 public class SolutionNotImplementedException extends RuntimeException {
-    public SolutionNotImplementedException() {
-        super("Solution not implemented");
-    }
+  static final long serialVersionUID = -2300134362278452064L;
 
+  public SolutionNotImplementedException() {
+    super("Solution not implemented");
+  }
 }
