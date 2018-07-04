@@ -26,14 +26,14 @@ public class CheckoutSolution {
     if (!isValid(skuList)) {
       return -1;
     }
-    return skuList
-        .stream()
-        .map(sku -> priceMap.getOrDefault(sku, 0))
-        .reduce((x, y) -> x + y)
-        .orElse(-1);
+    return sum(skuList.stream().map(sku -> priceMap.getOrDefault(sku, 0)));
   }
 
   public boolean isValid(List<String> skus) {
     return priceMap.keySet().containsAll(skus);
+  }
+
+  private Integer sum(List<Integer> prices) {
+    return prices.stream().reduce((a, b) -> a + b).get();
   }
 }
