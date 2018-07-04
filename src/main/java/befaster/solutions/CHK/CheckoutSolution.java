@@ -12,12 +12,10 @@ public class CheckoutSolution {
   }
 
   public Integer checkout(String skus) {
-    Optional<Integer> test = Optional.of(1);
-    test.getOrElse(1);
     return Arrays.asList(skus.split(" "))
         .stream()
         .map(sku -> priceMap.getOrDefault(sku, 0))
         .reduce((x, y) -> x + y)
-        .getOr(-1);
+        .orElse(-1);
   }
 }

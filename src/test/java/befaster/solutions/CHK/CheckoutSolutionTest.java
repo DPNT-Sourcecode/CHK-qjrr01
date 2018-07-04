@@ -24,11 +24,16 @@ public class CheckoutSolutionTest {
 
   @Test
   public void testCheckoutABC() throws Exception {
-    assertThat(checkout.checkout("A B C"), equalTo(50 + 30 + 20));
+    assertThat(checkout.checkout("A B C"), equalTo(100));
   }
 
   @Test
   public void testCheckoutABCD() throws Exception {
-    assertThat(checkout.checkout("A B C D"), equalTo(50 + 30 + 20 + 15));
+    assertThat(checkout.checkout("A B C D"), equalTo(115));
+  }
+
+  @Test
+  public void testIllegalSkuShouldReturnMinusOne() throws Exception {
+    assertThat(checkout.checkout("A B Z"), equalTo(-1));
   }
 }
