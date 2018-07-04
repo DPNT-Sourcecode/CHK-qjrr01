@@ -6,8 +6,6 @@ import befaster.solutions.CHK.CheckoutSolution;
 import befaster.solutions.FIZ.FizzBuzzSolution;
 import befaster.solutions.HLO.HelloSolution;
 import befaster.solutions.SUM.SumSolution;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * This class maps an RPC event to a method call. It converts the parameters into the right format.
@@ -24,14 +22,11 @@ public class EntryPointMapping {
   private final FizzBuzzSolution fizzBuzzSolution;
   private final CheckoutSolution checkoutSolution;
 
-  private Map<String, Integer> priceMap = new HashMap<>();
-
   EntryPointMapping() {
     sumSolution = new SumSolution();
     helloSolution = new HelloSolution();
     fizzBuzzSolution = new FizzBuzzSolution();
-
-    checkoutSolution = new CheckoutSolution(priceMap);
+    checkoutSolution = new CheckoutSolution();
   }
 
   public Object sum(String... p) {

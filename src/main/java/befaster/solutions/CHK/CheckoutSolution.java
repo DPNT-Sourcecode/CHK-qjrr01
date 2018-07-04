@@ -1,12 +1,21 @@
 package befaster.solutions.CHK;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class CheckoutSolution {
 
   private Map<String, Integer> priceMap;
+
+  public CheckoutSolution() {
+    priceMap = new HashMap<>();
+    priceMap.put("A", 50);
+    priceMap.put("B", 30);
+    priceMap.put("C", 20);
+    priceMap.put("D", 15);
+  }
 
   public CheckoutSolution(Map<String, Integer> priceMap) {
     this.priceMap = priceMap;
