@@ -1,5 +1,6 @@
 package befaster.solutions.CHK;
 
+import java.util.Arrays;
 import java.util.Map;
 
 public class CheckoutSolution {
@@ -11,7 +12,12 @@ public class CheckoutSolution {
   }
 
   public Integer checkout(String skus) {
-      Arrays.asList(skus.split(" "))
-    return 50 + 30 + 20;
+    Optional<Integer> test = Optional.of(1);
+    test.getOrElse(1);
+    return Arrays.asList(skus.split(" "))
+        .stream()
+        .map(sku -> priceMap.getOrDefault(sku, 0))
+        .reduce((x, y) -> x + y)
+        .getOr(-1);
   }
 }
