@@ -52,4 +52,9 @@ public class CheckoutSolutionTest {
   public void test3A() throws Exception {
     assertThat(checkout.checkout("A A A"), equalTo(130));
   }
+
+  @Test
+  public void test2B() throws Exception {
+    assertThat(checkout.checkout("B B"), equalTo(45));
+  }
 }
