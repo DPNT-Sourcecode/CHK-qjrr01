@@ -18,4 +18,9 @@ public class CheckoutSolution {
         .reduce((x, y) -> x + y)
         .orElse(-1);
   }
+
+    public boolean isValid(List<String> skus) {
+        return
+
+    }
 }
