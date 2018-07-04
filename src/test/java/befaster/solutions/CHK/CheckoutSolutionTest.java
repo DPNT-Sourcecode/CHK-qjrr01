@@ -15,10 +15,10 @@ public class CheckoutSolutionTest {
 
   @Before
   public void setUp() {
-    priceMap.add("A", 50);
-    priceMap.add("B", 30);
-    priceMap.add("C", 20);
-    priceMap.add("D", 15);
+    priceMap.put("A", 50);
+    priceMap.put("B", 30);
+    priceMap.put("C", 20);
+    priceMap.put("D", 15);
     checkout = new CheckoutSolution(priceMap);
   }
 
