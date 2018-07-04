@@ -1,6 +1,7 @@
 package befaster.solutions.CHK;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 public class CheckoutSolution {
@@ -19,8 +20,7 @@ public class CheckoutSolution {
         .orElse(-1);
   }
 
-    public boolean isValid(List<String> skus) {
-        return
-
-    }
+  public boolean isValid(List<String> skus) {
+    return priceMap.keySet().containsAll(skus);
+  }
 }

@@ -36,4 +36,14 @@ public class CheckoutSolutionTest {
   public void testIllegalSkuShouldReturnMinusOne() throws Exception {
     assertThat(checkout.checkout("A B Z"), equalTo(-1));
   }
+
+  @Test
+  public void testIsValidWithValidItems() throws Exception {
+    assertThat(checkout.isValid("A B C D"), equalTo(true));
+  }
+
+  @Test
+  public void testIsValidWithInvalidItems() throws Exception {
+    assertThat(checkout.isValid("A B C D Z"), equalTo(false));
+  }
 }
