@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 public class CheckoutSolution {
 
@@ -33,7 +34,7 @@ public class CheckoutSolution {
     return priceMap.keySet().containsAll(skus);
   }
 
-  private Integer sum(List<Integer> prices) {
-    return prices.stream().reduce((a, b) -> a + b).get();
+  private Integer sum(Stream<Integer> prices) {
+    return prices.mapToInt(Integer::intValue).sum();
   }
 }
