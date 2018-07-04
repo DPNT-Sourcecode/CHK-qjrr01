@@ -25,7 +25,7 @@ public class CheckoutSolution {
         .stream()
         .map(sku -> priceMap.getOrDefault(sku, 0))
         .reduce((x, y) -> x + y)
-        .orElse(-1);
+        .orElse(0);
   }
 
   public boolean isValid(List<String> skus) {
