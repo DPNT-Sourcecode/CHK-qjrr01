@@ -47,4 +47,9 @@ public class CheckoutSolutionTest {
   public void testIsValidWithInvalidItems() throws Exception {
     assertThat(checkout.isValid(Arrays.asList("A B C D Z".split(" "))), equalTo(false));
   }
+
+  @Test
+  public void test3A() throws Exception {
+    assertThat(checkout.checkout("A A A"), equalTo(130));
+  }
 }

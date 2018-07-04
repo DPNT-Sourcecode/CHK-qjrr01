@@ -13,7 +13,11 @@ public class CheckoutSolution {
   }
 
   public Integer checkout(String skus) {
-    return Arrays.asList(skus.split(" "))
+    List<String> skuList = Arrays.asList(skus.split(" "));
+    if (!isValid(skuList)) {
+      return -1;
+    }
+    return skuList
         .stream()
         .map(sku -> priceMap.getOrDefault(sku, 0))
         .reduce((x, y) -> x + y)
