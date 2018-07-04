@@ -3,6 +3,7 @@ package befaster.solutions.CHK;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.Before;
@@ -39,11 +40,11 @@ public class CheckoutSolutionTest {
 
   @Test
   public void testIsValidWithValidItems() throws Exception {
-    assertThat(checkout.isValid("A B C D"), equalTo(true));
+    assertThat(checkout.isValid(Arrays.asList("A B C D".split(" "))), equalTo(true));
   }
 
   @Test
   public void testIsValidWithInvalidItems() throws Exception {
-    assertThat(checkout.isValid("A B C D Z"), equalTo(false));
+    assertThat(checkout.isValid(Arrays.asList("A B C D Z".split(" "))), equalTo(false));
   }
 }
