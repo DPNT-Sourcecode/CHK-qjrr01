@@ -1,0 +1,4 @@
+(clojure.string/join "," '('a 'b 'c))
+(clojure.string/join " " '(1 2 3 4 56))
+(clojure.string/join "," '(1 2 3 4 56))
+(exit)
