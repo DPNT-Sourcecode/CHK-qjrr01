@@ -4,5 +4,7 @@ interface Offer<T> {
 
   void setNext(Offer<T> offer);
 
-  T apply();
+  void apply();
+
+  boolean hasNext();
 }

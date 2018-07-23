@@ -1,13 +1,14 @@
 package befaster.solutions.CHK.offers;
 
-public class SimpleOffer<Integer> implements Offer<Integer> {
-  private Offer<Integer> next;
+public class SimpleOffer<T> implements Offer<T> {
 
-  public void setNext(Offer<Integer> offer) {
+  private Optional<Offer<T>> next;
+
+  public void setNext(Offer<T> offer) {
     this.next = next;
   }
 
-  public Integer apply() {
-    return Integer.valueOf(1);
-  }
+  public void apply() {}
+
+  public boolean hasNext() {}
 }
