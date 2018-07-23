@@ -1,12 +1,13 @@
 package befaster.solutions.CHK.offers;
 
+import java.math.BigDecimal;
 import java.util.Map;
 
-interface Offer<T> {
+public interface Offer {
 
-  void setNext(Offer<T> offer);
+  void setNext(Offer offer);
 
-  void apply(Map<String, Long> countMap, String item);
+  BigDecimal apply(Map<String, Long> countMap, String item);
 
   boolean hasNext();
 }

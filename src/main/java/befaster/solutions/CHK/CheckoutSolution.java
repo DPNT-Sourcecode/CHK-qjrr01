@@ -1,5 +1,9 @@
 package befaster.solutions.CHK;
 
+import befaster.solutions.CHK.models.OfferItem;
+import befaster.solutions.CHK.offers.Offer;
+import befaster.solutions.CHK.offers.SimpleOffer;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -18,6 +22,13 @@ public class CheckoutSolution {
     priceMap.put("B", 30);
     priceMap.put("C", 20);
     priceMap.put("D", 15);
+
+    // Setup Offers
+    OfferItem a = new OfferItem("A", 3, BigDecimal.valueOf(20));
+    OfferItem b = new OfferItem("B", 2, BigDecimal.valueOf(15));
+    Offer offerA = new SimpleOffer(a);
+    Offer offerB = new SimpleOffer(b);
+    offerA.setNext(offerB);
   }
 
   public CheckoutSolution(Map<String, Integer> priceMap) {
