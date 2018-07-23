@@ -1,11 +1,13 @@
 package befaster.solutions.CHK.models;
 
+import java.math.BigDecimal;
+
 public class OfferItem {
   private String name;
   private Integer requiredCount;
-  private Integer discount;
+  private BigDecimal discount;
 
-  public OfferItem(String name, Integer requiredCount, Integer discount) {
+  public OfferItem(String name, Integer requiredCount, BigDecimal discount) {
     this.name = name;
     this.requiredCount = requiredCount;
     this.discount = discount;
@@ -19,7 +21,7 @@ public class OfferItem {
     return requiredCount;
   }
 
-  public Integer getDiscount() {
+  public BigDecimal getDiscount() {
     return discount;
   }
 }
