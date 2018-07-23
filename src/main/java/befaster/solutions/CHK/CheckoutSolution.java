@@ -43,7 +43,7 @@ public class CheckoutSolution {
 
   public Integer calculateDiscount(List<String> skus, String item) {
     Map<String, Long> countMap = countMap(skus);
-    countMap.getOrDefault(item, 0);
+    countMap.getOrDefault(item, 0l);
     return 20;
   }
 
