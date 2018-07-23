@@ -1,5 +1,6 @@
 package befaster.solutions.CHK.offers;
 
+import java.util.Map;
 import java.util.Optional;
 
 public class SimpleOffer<T> implements Offer<T> {
