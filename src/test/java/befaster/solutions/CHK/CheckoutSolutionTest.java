@@ -24,27 +24,27 @@ public class CheckoutSolutionTest {
 
   @Test
   public void testCheckoutABC() throws Exception {
-    assertThat(checkout.checkout("A B C"), equalTo(100));
+    assertThat(checkout.checkout("A B C")).isEqualTo(100);
   }
 
   @Test
   public void testCheckoutABCD() throws Exception {
-    assertThat(checkout.checkout("A B C D"), equalTo(115));
+    assertThat(checkout.checkout("A B C D")).isEqualTo(115);
   }
 
   @Test
   public void testIllegalSkuShouldReturnMinusOne() throws Exception {
-    assertThat(checkout.checkout("A B Z"), equalTo(-1));
+    assertThat(checkout.checkout("A B Z")).isEqualTo(-1);
   }
 
   @Test
   public void testIsValidWithValidItems() throws Exception {
-    assertThat(checkout.isValid(Arrays.asList("A B C D".split(" "))), equalTo(true));
+    assertThat(checkout.isValid(Arrays.asList("A B C D".split(" ")))).isEqualTo(true);
   }
 
   @Test
   public void testIsValidWithInvalidItems() throws Exception {
-    assertThat(checkout.isValid(Arrays.asList("A B C D Z".split(" "))), equalTo(false));
+    assertThat(checkout.isValid(Arrays.asList("A B C D Z".split(" ")))).isEqualTo(false);
   }
 
   @Test
