@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class CheckoutSolution {
@@ -35,8 +37,8 @@ public class CheckoutSolution {
     return priceMap.keySet().containsAll(skus);
   }
 
-  public static Map<String, Count> countMap(List<String> skus) {
-    return skus.stream();
+  public static Map<String, Long> countMap(List<String> skus) {
+    return skus.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
   }
 
   private Integer sum(Stream<Integer> prices) {

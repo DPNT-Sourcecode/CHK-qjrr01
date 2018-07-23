@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
@@ -49,8 +50,11 @@ public class CheckoutSolutionTest {
 
   @Test
   public void testCountMap() throws Exception {
-    Map<String, Integer> expectedCountMap = new HashMap<>();
-    assertThat(CheckoutSolution.countMap()).isEqualTo(expectedCountMap);
+    Map<String, Long> expectedCountMap = new HashMap<>();
+    expectedCountMap.put("A", 4l);
+    expectedCountMap.put("B", 1l);
+    List<String> skus = Arrays.asList("A A B A A".split(" "));
+    assertThat(CheckoutSolution.countMap(skus)).isEqualTo(expectedCountMap);
   }
 
   @Test
