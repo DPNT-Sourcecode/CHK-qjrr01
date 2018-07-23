@@ -35,6 +35,10 @@ public class CheckoutSolution {
     return priceMap.keySet().containsAll(skus);
   }
 
+  public static Map<String, Count> countMap(List<String> skus) {
+    return skus.stream();
+  }
+
   private Integer sum(Stream<Integer> prices) {
     return prices.mapToInt(Integer::intValue).sum();
   }
