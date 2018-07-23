@@ -1,7 +1,6 @@
 package befaster.solutions.CHK;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -47,6 +46,9 @@ public class CheckoutSolutionTest {
   public void testIsValidWithInvalidItems() throws Exception {
     assertThat(checkout.isValid(Arrays.asList("A B C D Z".split(" "))), equalTo(false));
   }
+
+  @Test
+  public void testCountMap() throws Exception {}
 
   @Test
   public void test3A() throws Exception {

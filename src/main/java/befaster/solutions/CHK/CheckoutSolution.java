@@ -27,7 +27,8 @@ public class CheckoutSolution {
     if (!isValid(skuList)) {
       return -1;
     }
-    return sum(skuList.stream().map(sku -> priceMap.getOrDefault(sku, 0)));
+    Stream<Integer> prices = skuList.stream().map(sku -> priceMap.getOrDefault(sku, 0));
+    return sum();
   }
 
   public boolean isValid(List<String> skus) {
