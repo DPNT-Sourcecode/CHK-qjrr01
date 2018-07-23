@@ -58,6 +58,13 @@ public class CheckoutSolutionTest {
   }
 
   @Test
+  public void testCalculateDiscount() throws Exception {
+    List<String> skus = Arrays.asList("A A A".split(" "));
+    CheckoutSolution cs = new CheckoutSolution();
+    cs.calculateDiscount(skus);
+  }
+
+  @Test
   public void test3A() throws Exception {
     assertThat(checkout.checkout("A A A")).isEqualTo(130);
   }

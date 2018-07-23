@@ -41,6 +41,10 @@ public class CheckoutSolution {
     return skus.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
   }
 
+  public Integer calculateDiscount(List<String> skus) {
+    Map<String, Long> countMap = countMap(skus);
+  }
+
   private Integer sum(Stream<Integer> prices) {
     return prices.mapToInt(Integer::intValue).sum();
   }
