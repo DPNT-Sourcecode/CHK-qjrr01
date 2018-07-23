@@ -18,17 +18,19 @@ public class OfferItemTest {
 
   @Test
   public void testGetName() throws Exception {
-    assertThat(new OfferItem("item", 1, new BigDecimal(3)).getName()).isEqualTo("item");
+    OfferItem offerItem = new OfferItem("item", 1, new BigDecimal(3));
+    assertThat(offerItem.getName()).isEqualTo("item");
   }
 
   @Test
   public void testRequiredCount() throws Exception {
-    assertThat(new OfferItem("item", 1, new BigDecimal(3)).getRequiredCount()).isEqualTo(1);
+    OfferItem offerItem = new OfferItem("item", 1, new BigDecimal(3));
+    assertThat(offerItem.getRequiredCount()).isEqualTo(1);
   }
 
   @Test
   public void testGetDiscount() throws Exception {
     OfferItem offerItem = new OfferItem("item", 1, new BigDecimal(3));
-    assertThat(offerItem.getDiscount()).isEqualTo(3);
+    assertThat(offerItem.getDiscount()).isEqualTo(BigDecimal.valueOf(3l));
   }
 }
