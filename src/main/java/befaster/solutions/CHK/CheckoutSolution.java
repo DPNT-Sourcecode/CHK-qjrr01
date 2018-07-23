@@ -28,7 +28,7 @@ public class CheckoutSolution {
       return -1;
     }
     Stream<Integer> prices = skuList.stream().map(sku -> priceMap.getOrDefault(sku, 0));
-    return sum();
+    return sum(prices);
   }
 
   public boolean isValid(List<String> skus) {

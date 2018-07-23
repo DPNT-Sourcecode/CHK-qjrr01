@@ -52,11 +52,11 @@ public class CheckoutSolutionTest {
 
   @Test
   public void test3A() throws Exception {
-    assertThat(checkout.checkout("A A A"), equalTo(130));
+    assertThat(checkout.checkout("A A A")).isEqualTo(130);
   }
 
   @Test
   public void test2B() throws Exception {
-    assertThat(checkout.checkout("B B"), equalTo(45));
+    assertThat(checkout.checkout("B B")).isEqualTo(45);
   }
 }
