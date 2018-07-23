@@ -8,6 +8,6 @@ public class SimpleOffer<Integer> implements Offer<Integer> {
   }
 
   public Integer apply() {
-    return Integer.valueOf(0);
+    return Integer.valueOf(1);
   }
 }
