@@ -48,7 +48,10 @@ public class CheckoutSolutionTest {
   }
 
   @Test
-  public void testCountMap() throws Exception {}
+  public void testCountMap() throws Exception {
+    Map<String, Integer> expectedCountMap = new HashMap<>();
+    assertThat(CheckoutSolution.countMap()).isEqualTo(expectedCountMap);
+  }
 
   @Test
   public void test3A() throws Exception {
