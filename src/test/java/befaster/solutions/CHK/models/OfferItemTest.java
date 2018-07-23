@@ -14,4 +14,9 @@ public class OfferItemTest {
   public void testConstructor() throws Exception {
     new OfferItem("name", 1, 2);
   }
+
+  @Test
+  public void testGetName() throws Exception {
+    assertThat(new OfferItem("item", 1, 3).getName()).isEqualTo("item");
+  }
 }

@@ -2,12 +2,24 @@ package befaster.solutions.CHK.models;
 
 public class OfferItem {
   private String name;
-  private Integer count;
+  private Integer requiredCount;
   private Integer discount;
 
-  public OfferItem(String name, Integer count, Integer discount) {
+  public OfferItem(String name, Integer requiredCount, Integer discount) {
     this.name = name;
-    this.count = count;
+    this.requiredCount = requiredCount;
     this.discount = discount;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public Integer getRequiredCount() {
+    return requiredCount;
+  }
+
+  public Integer getDiscount() {
+    return discount;
   }
 }
