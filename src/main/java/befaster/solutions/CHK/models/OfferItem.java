@@ -1,9 +1,13 @@
 package befaster.solutions.CHK.models;
 
-import java.math.BigDecimal;
-
 public class OfferItem {
   private String name;
   private String count;
-  private BigDecimal discount;
+  private Integer discount;
+
+  public OfferItem(String name, String count, Integer discount) {
+    this.name = name;
+    this.count = count;
+    this.discount = discount;
+  }
 }
