@@ -58,10 +58,19 @@ public class CheckoutSolutionTest {
   }
 
   @Test
-  public void testCalculateDiscount() throws Exception {
+  public void testCalculateDiscount2A() throws Exception {
     List<String> skus = Arrays.asList("A A A".split(" "));
     CheckoutSolution cs = new CheckoutSolution();
-    cs.calculateDiscount(skus);
+    Integer discount = cs.calculateDiscount(skus);
+    assertThat(discount).isEqualTo(20);
+  }
+
+  @Test
+  public void testCalculateDiscount2B() throws Exception {
+    List<String> skus = Arrays.asList("B B".split(" "));
+    CheckoutSolution cs = new CheckoutSolution();
+    Integer discount = cs.calculateDiscount(skus);
+    assertThat(discount).isEqualTo(15);
   }
 
   @Test
