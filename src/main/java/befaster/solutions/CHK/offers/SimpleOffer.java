@@ -1,5 +1,7 @@
 package befaster.solutions.CHK.offers;
 
+import java.util.Optional;
+
 public class SimpleOffer<T> implements Offer<T> {
 
   private Optional<Offer<T>> next;
@@ -8,7 +10,9 @@ public class SimpleOffer<T> implements Offer<T> {
     this.next = next;
   }
 
-  public void apply() {}
+  public void apply(Map<String, Long> countMap, String item) {}
 
-  public boolean hasNext() {}
+  public boolean hasNext() {
+    return next.isPresent();
+  }
 }
