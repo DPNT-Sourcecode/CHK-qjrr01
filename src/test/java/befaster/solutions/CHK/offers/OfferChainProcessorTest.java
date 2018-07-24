@@ -14,4 +14,12 @@ public class OfferChainProcessorTest {
   public void testConstructor() throws Exception {
     new OfferChainProcessor();
   }
+
+  @Test
+  public void testApply() throws Exception {
+      OfferItem offerItem = new OfferItem()
+      Offer offer = new SimpleOffer()
+      new OfferChainProcessor()
+  }
+
 }
