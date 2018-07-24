@@ -4,6 +4,8 @@ import static org.assertj.core.api.Assertions.*;
 
 import befaster.solutions.CHK.models.OfferItem;
 import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
