@@ -25,6 +25,7 @@ public class OfferChainProcessorTest {
     Offer offer = new SimpleOffer(offerItem);
     OfferChainProcessor processor = new OfferChainProcessor(offer);
     List<String> skus = Arrays.asList("A A B A".split(" "));
-    processor.apply(skus);
+    BigDecimal discount = processor.apply(skus);
+    assertThat(discount).isEqualTo(BigDecimal.valueOf(20));
   }
 }
