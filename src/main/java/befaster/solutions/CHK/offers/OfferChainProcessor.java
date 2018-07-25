@@ -17,6 +17,7 @@ public class OfferChainProcessor {
   }
 
   private BigDecimal apply(Map<String, Long> countMap, String item) {
+    System.out.println("-------------------------");
     System.out.println("item in stream " + item);
     return root.apply(countMap, item);
   }
