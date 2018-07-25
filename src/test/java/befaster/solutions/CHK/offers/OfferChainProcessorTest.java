@@ -38,6 +38,7 @@ public class OfferChainProcessorTest {
     OfferChainProcessor processor = new OfferChainProcessor(offerA);
     processor.addOffer(offerB);
     assertThat(offerA.hasNext()).isTrue();
-    assertThat(offerA.getNext()).isEqualTo(offerB);
+    assertThat(offerA.getNext().isPresent()).isTrue();
+    assertThat(offerA.getNext().get()).isEqualTo(offerB);
   }
 }

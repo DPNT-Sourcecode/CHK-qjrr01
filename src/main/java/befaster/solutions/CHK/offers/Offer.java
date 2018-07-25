@@ -2,6 +2,7 @@ package befaster.solutions.CHK.offers;
 
 import java.math.BigDecimal;
 import java.util.Map;
+import java.util.Optional;
 
 public interface Offer {
 
@@ -10,4 +11,6 @@ public interface Offer {
   BigDecimal apply(Map<String, Long> countMap, String item);
 
   boolean hasNext();
+
+  Optional<Offer> getNext();
 }
