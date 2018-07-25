@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 
 public class OfferChainProcessor {
 
+  private Offer previous;
   private Offer root;
 
   public OfferChainProcessor(Offer root) {
@@ -20,4 +21,6 @@ public class OfferChainProcessor {
         countMap.keySet().stream().map(item -> root.apply(countMap, item));
     return discounts.reduce(BigDecimal.ZERO, BigDecimal::add);
   }
+
+  public void addOffer(Offer offer) {}
 }

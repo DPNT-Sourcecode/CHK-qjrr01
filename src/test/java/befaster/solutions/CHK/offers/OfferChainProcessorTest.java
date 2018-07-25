@@ -28,4 +28,9 @@ public class OfferChainProcessorTest {
     BigDecimal discount = processor.apply(skus);
     assertThat(discount).isEqualTo(BigDecimal.valueOf(20));
   }
+
+  @Test
+  public void testAddOffer() throws Exception {
+    // add multiple offers to offer chain
+  }
 }
