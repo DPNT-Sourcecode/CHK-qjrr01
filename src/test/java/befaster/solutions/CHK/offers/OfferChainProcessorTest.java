@@ -33,7 +33,11 @@ public class OfferChainProcessorTest {
   public void testAddOffer() throws Exception {
     OfferItem a = new OfferItem("A", 3, BigDecimal.valueOf(20));
     OfferItem b = new OfferItem("B", 2, BigDecimal.valueOf(15));
-    Offer offerA = new SimpleOffer(offerA);
-    Offer offerB = new SimpleOffer(offerB);
+    Offer offerA = new SimpleOffer(a);
+    Offer offerB = new SimpleOffer(b);
+    OfferChainProcessor processor = new OfferChainProcessor(offerA);
+    processor.addOffer(offerB);
+    assertThat(offerA.hasNext()).isTrue();
+    assertThat(offerA.getNext()).isEqualTo(offerB);
   }
 }
