@@ -26,7 +26,7 @@ public class SimpleOffer implements Offer {
     if (itemCount >= requiredCount) {
       BigDecimal multiplier = BigDecimal.valueOf(itemCount / requiredCount);
       BigDecimal itemDiscount = offerItem.getDiscount().multiply(multiplier);
-      discount = discount.plus(itemDiscount);
+      discount = discount.add(itemDiscount);
     }
     if (this.hasNext()) {
       getNext().get().apply(countMap, item);
