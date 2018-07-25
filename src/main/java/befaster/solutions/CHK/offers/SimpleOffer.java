@@ -22,14 +22,16 @@ public class SimpleOffer implements Offer {
   public BigDecimal apply(Map<String, Long> countMap, String item) {
     Long itemCount = countMap.get(item);
     Integer requiredCount = offerItem.getRequiredCount();
+    BigDecimal discount = BigDecimal.ZERO;
     if (itemCount >= requiredCount) {
       BigDecimal multiplier = BigDecimal.valueOf(itemCount / requiredCount);
-      return offerItem.getDiscount().multiply(multiplier);
+      BigDecimal itemDiscount = offerItem.getDiscount().multiply(multiplier);
+      discount = discount.plus(itemDiscount);
     }
-    if(this.hasNext()) {
-        getNex
+    if (this.hasNext()) {
+      getNext().get().apply(countMap, item);
     }
-    return BigDecimal.ZERO;
+    return discount;
   }
 
   public Optional<Offer> getNext() {
