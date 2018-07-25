@@ -40,9 +40,9 @@ public class OfferChainProcessorTest {
     OfferChainProcessor processor = new OfferChainProcessor(offerA);
     processor.addOffer(offerB);
     processor.addOffer(offerC);
-    List<String> skus = Arrays.asList("A A B A C C B C C".split(" "));
+    List<String> skus = Arrays.asList("A A A B B C C C C".split(" "));
     BigDecimal discount = processor.apply(skus);
-    assertThat(discount).isEqualTo(BigDecimal.valueOf(20));
+    assertThat(discount).isEqualTo(BigDecimal.valueOf(35));
   }
 
   @Test
