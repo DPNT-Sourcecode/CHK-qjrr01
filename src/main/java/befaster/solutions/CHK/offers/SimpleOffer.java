@@ -29,7 +29,9 @@ public class SimpleOffer implements Offer {
       BigDecimal itemDiscount = offerItem.getDiscount().multiply(multiplier);
       discount = discount.add(itemDiscount);
     }
+    System.out.println("discount for A is " + discount);
     if (this.hasNext()) {
+      System.out.println("this has next");
       getNext().get().apply(countMap, item);
     }
     return discount;
