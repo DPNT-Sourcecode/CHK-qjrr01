@@ -26,6 +26,9 @@ public class SimpleOffer implements Offer {
       BigDecimal multiplier = BigDecimal.valueOf(itemCount / requiredCount);
       return offerItem.getDiscount().multiply(multiplier);
     }
+    if(this.hasNext()) {
+        getNex
+    }
     return BigDecimal.ZERO;
   }
 
