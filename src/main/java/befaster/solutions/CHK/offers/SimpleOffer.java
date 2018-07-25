@@ -19,6 +19,8 @@ public class SimpleOffer implements Offer {
     this.next = Optional.of(offer);
   }
 
+  private BigDecimal apply(Map<String, Long> countMap, String item, BigDecimal acc) {}
+
   public BigDecimal apply(Map<String, Long> countMap, String item) {
     Long itemCount = countMap.get(item);
     Integer requiredCount = offerItem.getRequiredCount();
