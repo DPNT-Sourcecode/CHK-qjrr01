@@ -31,6 +31,9 @@ public class OfferChainProcessorTest {
 
   @Test
   public void testAddOffer() throws Exception {
-    // add multiple offers to offer chain
+    OfferItem a = new OfferItem("A", 3, BigDecimal.valueOf(20));
+    OfferItem b = new OfferItem("B", 2, BigDecimal.valueOf(15));
+    Offer offerA = new SimpleOffer(offerA);
+    Offer offerB = new SimpleOffer(offerB);
   }
 }
