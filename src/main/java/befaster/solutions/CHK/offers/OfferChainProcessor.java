@@ -16,7 +16,8 @@ public class OfferChainProcessor {
 
   public BigDecimal apply(List<String> skus) {
     Map<String, Long> countMap = CheckoutSolution.countMap(skus);
-    Stream<BigDecimal> discounts = skus.stream().map(item -> root.apply(countMap, item));
+    Stream<BigDecimal> discounts =
+        countMap.keySet().stream().map(item -> root.apply(countMap, item));
     return discounts.reduce(BigDecimal.ZERO, BigDecimal::add);
   }
 }
