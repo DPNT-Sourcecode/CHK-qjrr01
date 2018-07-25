@@ -16,17 +16,16 @@ public class OfferChainProcessor {
     this.root = root;
   }
 
-  private Integer test(String item) {
+  private BigDecimal apply(Map<String, Long> countMap, String item) {
     System.out.println("item in stream " + item);
-    return 2;
+    return root.apply(countMap, item);
   }
 
   public BigDecimal apply(List<String> skus) {
     Map<String, Long> countMap = CheckoutSolution.countMap(skus);
     Set<String> keySet = countMap.keySet();
     System.out.println("KeySet " + keySet.size());
-    keySet.stream().map(item -> test(item)).reduce(BigDecimal.ZERO, BigDecimal::add);
-    Stream<BigDecimal> discounts = keySet.stream().map(item -> root.apply(countMap, item));
+    Stream<BigDecimal> discounts = keySet.stream().map(item -> apply(countMap, item));
     return discounts.reduce(BigDecimal.ZERO, BigDecimal::add);
   }
 
