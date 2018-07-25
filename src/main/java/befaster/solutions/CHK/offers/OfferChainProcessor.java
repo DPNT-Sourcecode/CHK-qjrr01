@@ -22,5 +22,12 @@ public class OfferChainProcessor {
     return discounts.reduce(BigDecimal.ZERO, BigDecimal::add);
   }
 
-  public void addOffer(Offer offer) {}
+  public void addOffer(Offer offer) {
+    if (!root.hasNext()) {
+      root.setNext(offer);
+    } else {
+      previous.setNext(offer);
+    }
+    previous = offer;
+  }
 }
